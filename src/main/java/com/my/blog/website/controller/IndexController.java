@@ -58,7 +58,7 @@ public class IndexController extends BaseController {
      *
      * @return
      */
-    @GetMapping(value = "/")
+    @GetMapping(value = {"/","/index","/index.html"})
     public String index(HttpServletRequest request, @RequestParam(value = "limit", defaultValue = "12") int limit) {
         return this.index(request, 1, limit);
     }
